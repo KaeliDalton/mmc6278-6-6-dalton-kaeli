@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   const [[{cartCount}]] = await db.query('SELECT SUM(quantity) AS cartCount FROM cart;')
 
   // TODO: Convert the response below to render a handlebars template
-  res.render('index', {rows, cartCount})
+  res.render('index', {rows,cartCount})
 })
 
 router.get('/product/:id', async (req, res) => {
